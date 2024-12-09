@@ -70,7 +70,7 @@ The underlying structure of this project is based on exploring the application o
   [8] "visualizations_and_general_analysis.R"
 ```
    
-2. Run the following files in the code directory to conduct analysis and produce plots based on predicting each specified variable.
+2. Run the following files in the code directory to conduct analysis and produce plots based on predicting each specified variable (FSWROUTY, FSFOODS, and FSSTAMP).
   * `FSWROUTY_variable.R` and corresponding `cluster_model_testing.R`
   * `fsfoods_analysis.R`
   * `fsstamp_analysis.R`
