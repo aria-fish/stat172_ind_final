@@ -24,7 +24,8 @@ install.packages(c("tidyverse", "knitr", "logistf", "ggthemes", "glmnet",
 The data used in for this project is generally split into CPS and ACS.
 - CPS is individual level data with household information included. It covers food insecurity measures for a limited scope of counties in Iowa.
 - ACS is Census data from the individual level with household information. It doesn't contain food insecurity measures but covers every county in Iowa.
-Some .csv files and geographic shapefiles were used to visualize predictions by PUMA.
+
+Additionally, some .csv files and geographic shapefiles were used to visualize predictions by PUMA.
 
 All of these source data files are already in the data subdirectory of the project, except for spm_pu_2022.sas7bdat, which needs to be externally added to your individual instance of the data subdirectory due to Git processing issues with the file size.
 
