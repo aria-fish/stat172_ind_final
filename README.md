@@ -100,4 +100,4 @@ The underlying structure of this project is based on exploring the application o
   [13] "test2.png"
   ```
 ## References
-[IPUMS CPS website] (https://cps.ipums.org/cps-action/variables/group)
+IPUMS CPS website: https://cps.ipums.org/cps-action/variables/group
