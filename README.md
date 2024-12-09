@@ -58,7 +58,7 @@ The underlying structure of this project is based on exploring the application o
    list.files("code")
    ```
    
-   ```
+```
   [1] "clean_acs.R"                          
   [2] "clean_cps.R"                          
   [3] "cluster_model_testing.R"              
@@ -67,7 +67,7 @@ The underlying structure of this project is based on exploring the application o
   [6] "fsstamp_analysis.R"                   
   [7] "FSWROUTY_variable.R"                  
   [8] "visualizations_and_general_analysis.R"
-   ```
+```
    
 2. Run the following files in the code directory to conduct analysis and produce plots based on predicting each specified variable.
   * `FSWROUTY_variable.R` and corresponding `cluster_model_testing.R`
