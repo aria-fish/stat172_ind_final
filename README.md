@@ -1,8 +1,8 @@
 ---
-title: "Wesley Life Analysis - Predicting Food Insecurity"
-author: "Aria Fisher"
-date: "12/09/2024"
-output: html_document
+Title: "Wesley Life Analysis - Predicting Food Insecurity"
+Author: "Aria Fisher"
+Date: "12/09/2024"
+Output: html_document
 ---
 
 ## Introduction
@@ -66,23 +66,18 @@ Those other files then reference cps_data and acs_data, both of which have now b
    ```r
    list.files('figures')
    ```
-```
- [1] "acs_elderly_population.png"            
- [2] "acs_elderly_proportion.png"            
- [3] "average_rank_of_insecurity_seniors.png"
- [4] "fsfoods_household_elderly.png"         
- [5] "FSSTMP_FSFOODS_ANALYSIS.png"           
- [6] "FSSTMP_FSWROUTY_ANALYSIS.png"          
- [7] "fsstmp_household_elderly.png"          
- [8] "FSWROUTY_FSFOODS_ANALYSIS.png"         
- [9] "number_of_seniors_by_puma.png"         
-[10] "number_on_seniors_fsstmp.png"          
-[11] "propotion_of_seniors_predicted.png"    
-[12] "test.png"                              
-[13] "test2.png"
-```
-## References
-
-Alatas,   V.,   Banerjee,   A.,   Hanna,   R.,   Olken,   B.,   and  Tobias,   J.  (2013).Targeting  the  poor:   Evidence  from  a  field  experiment  in  Indonesia.Harvard  Dataverse,https://doi.org/10.7910/DVN/M7SKQZ, V5.
-
-Hillebrecht,  M.,  Klonner,  S.,  Pacere,  N.  A.,  and  Souares,  A.  (2020b).   Community-basedversus statistical targeting of anti-poverty programs: Evidence from Burkina Faso.Journalof African Economies, 29(3):271–305
+  ```
+   [1] "acs_elderly_population.png"            
+   [2] "acs_elderly_proportion.png"            
+   [3] "average_rank_of_insecurity_seniors.png"
+   [4] "fsfoods_household_elderly.png"         
+   [5] "FSSTMP_FSFOODS_ANALYSIS.png"           
+   [6] "FSSTMP_FSWROUTY_ANALYSIS.png"          
+   [7] "fsstmp_household_elderly.png"          
+   [8] "FSWROUTY_FSFOODS_ANALYSIS.png"         
+   [9] "number_of_seniors_by_puma.png"         
+  [10] "number_on_seniors_fsstmp.png"          
+  [11] "propotion_of_seniors_predicted.png"    
+  [12] "test.png"                              
+  [13] "test2.png"
+  ```
