@@ -41,7 +41,7 @@ list.files("data")
  [9] "spm_pu_2022.sas7bdat"           "tl_2023_19_puma20"             
 [11] "total_iowa_seniors_by_puma.csv"
 ```
-To clean the data and obtain the files that are called in the model code, run clean_acs.R and clean_cps.R.
+To clean the data and obtain the files that are called in the model code, run `clean_acs.R` and `clean_cps.R`.
 Each next file you run to reproduce the models and visualizations will contain this code:
 
 ```r
