@@ -50,13 +50,14 @@ source("./code/clean_acs.R")
 Those other files can then directly reference cps_data and acs_data, both of which have now been cleaned.
 
 ## Methods Explaination
-The underlying structure of this project is based on exploring the application of a broad spectrum of models to a real-world dataset. For this reason, each food insecurity measure predicted in this project is approached with an MLE logistic regression, a logistic regression adjusted with Firth's Penalized Likelihood, a Random Forest and Random Tree, Lasso regression, and Ridge regression. Models are trained and tested on the CPS data set. The model with the highest AUC score is then selected for making predictions on the ACS data. Interaction terms and clustering are explored as a possible way to improve the models, but are not implemented in the final models as they fail to meaningfully improve their AUC scores.
+The underlying structure of this project is based on exploring the application of a broad spectrum of models to a real-world dataset. For this reason, each food insecurity measure predicted in this project is approached with an MLE logistic regression, a logistic regression adjusted with Firth's Penalized Likelihood, a Random Forest and Random Tree, Lasso regression, and Ridge regression. Models are trained and tested on the CPS data set. The model with the highest AUC score is then selected for making predictions on the ACS data. Interaction terms and clustering are explored as a possible way to improve the models, but are not implemented in the final models as they fail to meaningfully improve the AUC score.
 
 ## Reproduce
 1. Open the code directory and run `clean_cps.R` and `clean_acs.R`
    ```r
    list.files("code")
    ```
+   
    ```
   [1] "clean_acs.R"                          
   [2] "clean_cps.R"                          
