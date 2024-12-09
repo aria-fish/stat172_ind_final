@@ -76,7 +76,7 @@ The underlying structure of this project is based on exploring the application o
   * `fsstamp_analysis.R`
     
 3.  Run the following files in the code directory to conduct aggregate analysis and produce further aggregate visualizations.
-    Specifically, see the relationship between each predicted variable with each other and the senior (60+) population.
+    Specifically, see the relationship between each predicted variable and the senior (60+) population.
   * `visualizations_and_general_analysis.R`
   * `combining_predictions.R`
 
@@ -99,3 +99,5 @@ The underlying structure of this project is based on exploring the application o
   [12] "test.png"                              
   [13] "test2.png"
   ```
+## References
+[IPUMS CPS website] (https://cps.ipums.org/cps-action/variables/group)
