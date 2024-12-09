@@ -33,60 +33,55 @@ list.files("data")
 ```
 
 ```
-## [1] "cleaning.do"              "hillebrecht.csv"          "hillebrecht.dta"         
-## [4] "hillebrecht(missing).csv" "hillebrecht(missing).dta" "variables.csv"
+ [1] "cps_00005.csv"                  "cps_00006.csv"                 
+ [3] "fsfoods_prediction.csv"         "fsstmp_prediction.csv"         
+ [5] "fswrouty_prediction.csv"        "interim"                       
+ [7] "iowa_seniors_by_puma.csv"       "single_senior_household.csv"   
+ [9] "spm_pu_2022.sas7bdat"           "tl_2023_19_puma20"             
+[11] "total_iowa_seniors_by_puma.csv"
 ```
+To clean the data and obtain the files that are called in the model code, run clean_acs.R and clean_cps.R.
+Each next file you run to reproduce the models and visualizations will contain this code:
 
 ```r
-list.files("Data/Indonesia/Cleaning/")
+source("./code/clean_cps.R")
+source("./code/clean_acs.R")
 ```
-
-```
-##  [1] "alatas.csv"                               
-##  [2] "alatas.dta"                               
-##  [3] "alatas(missing).csv"                      
-##  [4] "alatas(missing).dta"                      
-##  [5] "cleaning.do"                              
-##  [6] "FAO Dietary Diversity Guidelines 2011.pdf"
-##  [7] "food.dta"                                 
-##  [8] "notes.docx"                               
-##  [9] "ranks.dta"                                
-## [10] "variables.csv"                            
-## [11] "xvars.dta"
-```
-
-The data files that will be called are "hillebrecht.csv" and "alatas.csv".
+Those other files then reference cps_data and acs_data, both of which have now been cleaned.
 
 ## Reproduce
-1. Run `run_simulations.R` to reproduce error rate results and coefficient estimate results. 
-  *  Indonesia Analysis/all_results.csv
-  *  Indonesia Analysis/all_coef.csv
-  *  Indonesia Analysis/coef_total_sample.csv
-  *  Indonesia Analysis/CB_beta_rank_CI_noelite.csv
-  *  Indonesia Analysis/CB_beta_rank_CI.csv
-  *  Burkina Faso Analysis/all_results.csv
-  *  Burkina Faso Analysis/all_coef.csv
-  *  Burkina Faso Analysis/coef_total_sample.csv
-  *  Burkina Faso Analysis/CB_beta_rank_CI_noelite.csv
-  *  Burkina Faso Analysis/CB_beta_rank_CI.csv
-  
-The above files can be used to generate plots found in the manuscript:
-  
-2. Run `Burkina Faso Analysis/make_plots.R` to reproduce error rate plots and coefficient plots for the Burkina Faso data. 
-  *  Burkina Faso Analysis/coef_score_EC_hillebrecht.pdf
-  *  Burkina Faso Analysis/coef_score_hillebrecht.pdf (Figure 1)
-  *  Burkina Faso Analysis/ER_hybrid_AI.pdf (Figure 7 a)
-  *  Burkina Faso Analysis/ER_hybrid_DU.pdf (Figure 8)
-  *  Burkina Faso Analysis/ER_hybrid.pdf (Figure 3 a)
-3. Run `Indonesia Analysis/make_plots.R` to reproduce error rate plots and coefficient plots for the Indonesia data. 
-  *  Indonesia Analysis/coef_score_EC_hillebrecht.pdf (Figure 5)
-  *  Indonesia Analysis/coef_score_hillebrecht.pdf (Figure 2)
-  *  Indonesia Analysis/ER_hybrid_AI.pdf (Figure 7 b)
-  *  Indonesia Analysis/ER_hybrid_EC.pdf (Figure 6)
-  *  Indonesia Analysis/ER_hybrid.pdf (Figure 3 b)
-4. Run `Burkina Faso Analysis/run_mcmc_weights.R` to reproduce heterogeneous ranker results. 
-  *  Burkina Faso Analysis/heter_weights_omega.pdf (Figure 4 a)
-  *  Burkina Faso Analysis/heter_weights_corr.pdf (Figure 4 b)
+1. Run `clean_cps.R` and `clean_acs.R`
+   
+3. Run the following files to conduct analysis and produce plots based on predicting each specified variable.
+  * `FSWROUTY_variable.R` and corresponding `cluster_model_testing.R`
+  * `fsfoods_analysis.R`
+  * `fsstamp_analysis.R`
+    
+3.  Run the following files to conduct aggregate analysis and produce further aggregate visualizations.
+    Specifically, see the relationship between each predicted variable with each other and the senior (60+) population.
+  * `visualizations_and_general_analysis.R`
+  * `combining_predictions.R`
+
+4. Visualizations for specific models are output by the specified variable files. Aggregate visualizations are saved for reference in the following directory:
+   ```r
+   list.files('figures')
+   ```
+
+   ```
+ [1] "acs_elderly_population.png"            
+ [2] "acs_elderly_proportion.png"            
+ [3] "average_rank_of_insecurity_seniors.png"
+ [4] "fsfoods_household_elderly.png"         
+ [5] "FSSTMP_FSFOODS_ANALYSIS.png"           
+ [6] "FSSTMP_FSWROUTY_ANALYSIS.png"          
+ [7] "fsstmp_household_elderly.png"          
+ [8] "FSWROUTY_FSFOODS_ANALYSIS.png"         
+ [9] "number_of_seniors_by_puma.png"         
+[10] "number_on_seniors_fsstmp.png"          
+[11] "propotion_of_seniors_predicted.png"    
+[12] "test.png"                              
+[13] "test2.png"
+  ```
 ## References
 
 Alatas,   V.,   Banerjee,   A.,   Hanna,   R.,   Olken,   B.,   and  Tobias,   J.  (2013).Targeting  the  poor:   Evidence  from  a  field  experiment  in  Indonesia.Harvard  Dataverse,https://doi.org/10.7910/DVN/M7SKQZ, V5.
