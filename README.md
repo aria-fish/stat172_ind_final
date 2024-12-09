@@ -6,7 +6,7 @@ Output: html_document
 ---
 
 ## Introduction
-This repository contains the code and data used to conduct an examination of senior food insecurity in Iowa at the PUMA (Public Use Microdata Area) level. The examination tests and compares a spectrum of models (General Linear Model, Random Forest, Lasso Regression, etc.) then visualizes the predictions of the best models on PUMA chloropleth maps. Models are trained on an Iowa subset of the IPUMS Current Population Survey (CPS).
+This repository contains the code and data used to conduct an examination of senior food insecurity in Iowa at the PUMA (Public Use Microdata Area) level. The examination tests and compares a spectrum of models (General Linear Model, Random Forest, Lasso Regression, etc.) then visualizes the predictions of the best models on PUMA choropleth maps. Models are trained on an Iowa subset of the IPUMS Current Population Survey (CPS).
 
 ## Requirements
 To install the required R packages, run the following code in R:
