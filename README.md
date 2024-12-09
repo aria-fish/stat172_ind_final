@@ -79,7 +79,7 @@ The underlying structure of this project is based on exploring the application o
   * `visualizations_and_general_analysis.R`
   * `combining_predictions.R`
 
-4. Visualizations for specific models are output by the specified variable files. Aggregate visualizations are saved for reference in the following directory:
+4. Visualizations for specific models are output by the variable analysis files run in step 2. Aggregate visualizations are saved for reference in the following directory:
    ```r
    list.files('figures')
    ```
