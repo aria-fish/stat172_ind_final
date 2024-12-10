@@ -54,7 +54,7 @@ Those other files can then directly reference cps_data and acs_data, both of whi
 The underlying structure of this project is based on exploring the application of a broad spectrum of models to a real-world dataset. For this reason, each food insecurity measure predicted in this project is approached with an MLE logistic regression, a logistic regression adjusted with Firth's Penalized Likelihood, a Random Forest and Random Tree, Lasso regression, and Ridge regression. Models are trained and tested on the CPS data set. The model with the highest AUC score is then selected for making predictions on the ACS data. Interaction terms and clustering are explored as a possible way to improve the models, but are not implemented in the final models as they fail to meaningfully improve the AUC score.
 
 ## Reproduce
-1. Open the code directory and run `clean_cps.R` and `clean_acs.R`
+1. Open the code directory and run `clean_cps.R` and `clean_acs.R.` Note that if the purpose of some of the cleaning procedures needs clarification, further information about the specifics of each variable is included in the `y_variable_information.md` file in the main project directory.
    ```r
    list.files("code")
    ```
